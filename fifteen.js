@@ -20,6 +20,7 @@ function main() {
 	$("change_pic").onclick=chang_pictures;
 }
 
+//改变背景图片
 function chang_pictures() {
 	picture++;
 	if(picture%5==0) {
@@ -49,6 +50,7 @@ function chang_pictures() {
 	}
 }
 
+//随机打乱拼图
 function random_div() {
 	var rand = 0;
 	for (var i = 0; i < 50; i ++) {
@@ -135,6 +137,7 @@ function ready_bg_image() {
 	for (var i = 2; i < small_div.length - 2; i ++) {
 		h = parseInt((i - 2)/4 )* 100;
 		w = (i - 2)%4 * 100;
+		//可优化
 		small_div[i].style.position="absolute";
 		small_div[i].style.left=w+"px";
 		small_div[i].style.top=h+"px";
